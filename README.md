@@ -31,7 +31,6 @@ Top-level
 - `LICENSE` — project license (e.g., MIT). Add as appropriate.
 - `requirements.txt` — Python dependencies (minimal: `matplotlib`, `pytest`).
 - `.gitignore` — recommended ignores (runtime logs, caches, large media).
-- `ieee_report.tex` — report source (optional).
 
 `Codes/` (core source and helpers)
 - `client.py` — sender program: chunking, CRC computation, optional error simulation, send chunk+CRC, wait ACK/NACK, retransmit.
@@ -40,7 +39,7 @@ Top-level
 - `file_chunker.py` — yields fixed-size binary chunks for file transmission.
 - `simple_test.py` — small demo script for single file transfer (manual run).
 - `test_runner.py` — automated experiment harness (runs transfers across error rates).
-- `osi_layer_mapping_diagram.py` — figure-generation code used in the paper (optional).
+
 
 `tests/`
 - `tests/test_crc.py` — unit test for CRC functions (CI-friendly, no networking).
