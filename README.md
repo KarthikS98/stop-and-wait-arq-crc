@@ -24,24 +24,6 @@ Software requirements
 - tkinter (usually bundled with Python)
 - Minimal Python packages: matplotlib, pytest
 
-Installation (PowerShell)
-Open PowerShell in the repository root and run:
-
-```powershell
-# optional: create and activate a virtual environment
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-
-# install minimal runtime packages
-pip install matplotlib pytest
-```
-
-Or install from `requirements.txt` if present:
-
-```powershell
-pip install -r requirements.txt
-```
-
 Usage (GUI) — single laptop
 1. Start the server GUI in one terminal:
 
