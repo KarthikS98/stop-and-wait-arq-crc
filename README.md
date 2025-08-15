@@ -84,7 +84,3 @@ This project is licensed under the MIT License — see `LICENSE`.
 Author
 Karthik S
 
-
-
-If you want, I can add a short `README.md`, a `.gitignore`, and a minimal `tests/test_crc.py` unit test file to the repository now.
-
