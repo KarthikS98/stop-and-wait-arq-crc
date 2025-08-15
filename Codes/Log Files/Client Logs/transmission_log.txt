@@ -1,0 +1,106 @@
+2025-07-25 10:36:25 | Preparing to send file: file_example_JPG_100kB.jpg
+2025-07-25 10:36:25 | Transmission started: C:/Users/lenov/Desktop/6th sem/PBL/CNP PBL/Codes/Test Samples/file_example_JPG_100kB.jpg | Chunks: 100 | Error prob: 0.6
+2025-07-25 10:36:25 | Chunk 0: Bit error introduced.
+2025-07-25 10:36:25 | Chunk 0: Sent (retry 1)
+2025-07-25 10:36:25 | Chunk 0: Server response: NACK: CRC32 error
+2025-07-25 10:36:25 | Chunk 0: NACK received. Retrying.
+2025-07-25 10:36:25 | Chunk 0: Sent (retry 2)
+2025-07-25 10:36:25 | Chunk 0: Server response: ACK: CRC32 valid
+2025-07-25 10:36:25 | Chunk 1: Bit error introduced.
+2025-07-25 10:36:25 | Chunk 1: Sent (retry 1)
+2025-07-25 10:36:25 | Chunk 1: Server response: NACK: CRC32 error
+2025-07-25 10:36:25 | Chunk 1: NACK received. Retrying.
+2025-07-25 10:36:25 | Chunk 1: Sent (retry 2)
+2025-07-25 10:36:25 | Chunk 1: Server response: ACK: CRC32 valid
+2025-07-25 10:36:25 | Chunk 2: Sent (retry 1)
+2025-07-25 10:36:25 | Chunk 2: Server response: ACK: CRC32 valid
+2025-07-25 10:36:25 | Chunk 3: Bit error introduced.
+2025-07-25 10:36:25 | Chunk 3: Sent (retry 1)
+2025-07-25 10:36:25 | Chunk 3: Server response: NACK: CRC32 error
+2025-07-25 10:36:25 | Chunk 3: NACK received. Retrying.
+2025-07-25 10:36:25 | Chunk 3: Sent (retry 2)
+2025-07-25 10:36:25 | Chunk 3: Server response: ACK: CRC32 valid
+2025-07-25 10:36:25 | Chunk 4: Sent (retry 1)
+2025-07-25 10:36:26 | Chunk 4: Server response: ACK: CRC32 valid
+2025-07-25 10:36:26 | Chunk 5: Bit error introduced.
+2025-07-25 10:36:26 | Chunk 5: Sent (retry 1)
+2025-07-25 10:36:26 | Chunk 5: Server response: NACK: CRC32 error
+2025-07-25 10:36:26 | Chunk 5: NACK received. Retrying.
+2025-07-25 10:36:26 | Chunk 5: Sent (retry 2)
+2025-07-25 10:36:26 | Chunk 5: Server response: ACK: CRC32 valid
+2025-07-25 10:36:26 | Chunk 6: Bit error introduced.
+2025-07-25 10:36:26 | Chunk 6: Sent (retry 1)
+2025-07-25 10:36:26 | Chunk 6: Server response: NACK: CRC32 error
+2025-07-25 10:36:26 | Chunk 6: NACK received. Retrying.
+2025-07-25 10:36:26 | Chunk 6: Bit error introduced.
+2025-07-25 10:36:26 | Chunk 6: Sent (retry 2)
+2025-07-25 10:36:26 | Chunk 6: Server response: NACK: CRC32 error
+2025-07-25 10:36:26 | Chunk 6: NACK received. Retrying.
+2025-07-25 10:36:26 | Chunk 6: Sent (retry 3)
+2025-07-25 10:36:26 | Chunk 6: Server response: ACK: CRC32 valid
+2025-07-25 10:36:26 | Chunk 7: Sent (retry 1)
+2025-07-25 10:36:26 | Chunk 7: Server response: ACK: CRC32 valid
+2025-07-25 10:36:26 | Chunk 8: Sent (retry 1)
+2025-07-25 10:36:26 | Chunk 8: Server response: ACK: CRC32 valid
+2025-07-25 10:36:26 | Chunk 9: Sent (retry 1)
+2025-07-25 10:36:26 | Chunk 9: Server response: ACK: CRC32 valid
+2025-07-25 10:36:26 | Chunk 10: Bit error introduced.
+2025-07-25 10:36:26 | Chunk 10: Sent (retry 1)
+2025-07-25 10:36:26 | Chunk 10: Server response: NACK: CRC32 error
+2025-07-25 10:36:26 | Chunk 10: NACK received. Retrying.
+2025-07-25 10:36:27 | Chunk 10: Sent (retry 2)
+2025-07-25 10:36:27 | Chunk 10: Server response: ACK: CRC32 valid
+2025-07-25 10:36:27 | Chunk 11: Sent (retry 1)
+2025-07-25 10:36:27 | Chunk 11: Server response: ACK: CRC32 valid
+2025-07-25 10:36:27 | Chunk 12: Bit error introduced.
+2025-07-25 10:36:27 | Chunk 12: Sent (retry 1)
+2025-07-25 10:36:27 | Chunk 12: Server response: NACK: CRC32 error
+2025-07-25 10:36:27 | Chunk 12: NACK received. Retrying.
+2025-07-25 10:36:27 | Chunk 12: Bit error introduced.
+2025-07-25 10:36:27 | Chunk 12: Sent (retry 2)
+2025-07-25 10:36:27 | Chunk 12: Server response: NACK: CRC32 error
+2025-07-25 10:36:27 | Chunk 12: NACK received. Retrying.
+2025-07-25 10:36:27 | Chunk 12: Sent (retry 3)
+2025-07-25 10:36:27 | Chunk 12: Server response: ACK: CRC32 valid
+2025-07-25 10:36:27 | Chunk 13: Bit error introduced.
+2025-07-25 10:36:27 | Chunk 13: Sent (retry 1)
+2025-07-25 10:36:27 | Chunk 13: Server response: NACK: CRC32 error
+2025-07-25 10:36:27 | Chunk 13: NACK received. Retrying.
+2025-07-25 10:36:27 | Chunk 13: Bit error introduced.
+2025-07-25 10:36:27 | Chunk 13: Sent (retry 2)
+2025-07-25 10:36:27 | Chunk 13: Server response: NACK: CRC32 error
+2025-07-25 10:36:27 | Chunk 13: NACK received. Retrying.
+2025-07-25 10:36:27 | Chunk 13: Bit error introduced.
+2025-07-25 10:36:27 | Chunk 13: Sent (retry 3)
+2025-07-25 10:36:27 | Chunk 13: Server response: NACK: CRC32 error
+2025-07-25 10:36:27 | Chunk 13: NACK received. Retrying.
+2025-07-25 10:36:27 | Chunk 13: Bit error introduced.
+2025-07-25 10:36:27 | Chunk 13: Sent (retry 4)
+2025-07-25 10:36:27 | Chunk 13: Server response: NACK: CRC32 error
+2025-07-25 10:36:27 | Chunk 13: NACK received. Retrying.
+2025-07-25 10:36:27 | Chunk 13: Sent (retry 5)
+2025-07-25 10:36:28 | Chunk 13: Server response: ACK: CRC32 valid
+2025-07-25 10:36:28 | Chunk 14: Sent (retry 1)
+2025-07-25 10:36:28 | Chunk 14: Server response: ACK: CRC32 valid
+2025-07-25 10:36:28 | Chunk 15: Bit error introduced.
+2025-07-25 10:36:28 | Chunk 15: Sent (retry 1)
+2025-07-25 10:36:28 | Chunk 15: Server response: NACK: CRC32 error
+2025-07-25 10:36:28 | Chunk 15: NACK received. Retrying.
+2025-07-25 10:36:28 | Chunk 15: Bit error introduced.
+2025-07-25 10:36:28 | Chunk 15: Sent (retry 2)
+2025-07-25 10:36:28 | Chunk 15: Server response: NACK: CRC32 error
+2025-07-25 10:36:28 | Chunk 15: NACK received. Retrying.
+2025-07-25 10:36:28 | Chunk 15: Bit error introduced.
+2025-07-25 10:36:28 | Chunk 15: Sent (retry 3)
+2025-07-25 10:36:28 | Chunk 15: Server response: NACK: CRC32 error
+2025-07-25 10:36:28 | Chunk 15: NACK received. Retrying.
+2025-07-25 10:36:28 | Chunk 15: Bit error introduced.
+2025-07-25 10:36:28 | Chunk 15: Sent (retry 4)
+2025-07-25 10:36:28 | Chunk 15: Server response: NACK: CRC32 error
+2025-07-25 10:36:28 | Chunk 15: NACK received. Retrying.
+2025-07-25 10:36:28 | Chunk 15: Bit error introduced.
+2025-07-25 10:36:28 | Chunk 15: Sent (retry 5)
+2025-07-25 10:36:28 | Chunk 15: Server response: NACK: CRC32 error
+2025-07-25 10:36:28 | Chunk 15: NACK received. Retrying.
+2025-07-25 10:36:28 | Chunk 15: Failed after 5 attempts. Aborting.
+2025-07-25 10:36:28 | Transmission complete for C:/Users/lenov/Desktop/6th sem/PBL/CNP PBL/Codes/Test Samples/file_example_JPG_100kB.jpg.

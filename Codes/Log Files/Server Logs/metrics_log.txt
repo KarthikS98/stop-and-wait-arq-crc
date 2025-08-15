@@ -1,0 +1,4 @@
+2025-07-25 06:42:03 | Total transmission time: 1.3488 seconds
+2025-07-25 06:42:03 | Throughput: 75712.31 bytes/sec
+2025-07-25 06:42:03 | Data Integrity Rate: 0.8929
+2025-07-25 06:42:03 | SNR: 9.20 dB (Total bits: 915240, Error bits: 98304)
