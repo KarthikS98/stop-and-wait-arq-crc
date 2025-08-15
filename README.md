@@ -56,7 +56,7 @@ python .\Codes\server_gui.py
 python .\Codes\client_gui.py
 ```
 
-3. In the client GUI: enter the server laptop's IPv4 address (find it with `ipconfig` on Windows), set BER, choose the file, then `Connect` and `Send`.
+3. In the client GUI: enter the server laptop's IPv4 address (find it with `ipconfig` on Windows), set BER, choose the file, then  `Send`.
 
 Notes:
 - Both machines must be on the same local network and port 65432 should be reachable (allow Python through the firewall if prompted).
