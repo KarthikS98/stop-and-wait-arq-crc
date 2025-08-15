@@ -1,93 +1,110 @@
 # Stop-and-Wait ARQ with CRC — Python file-transfer simulator
 
-A compact, runnable Python implementation of Stop-and-Wait ARQ using CRC for per-chunk error detection. This repository contains the sender and receiver, CRC utilities, simple demo scripts, and a small unit test so a newcomer can clone and run the project locally.
+A computer-networking project that implements Stop-and-Wait ARQ with CRC-based error detection to reliably transfer files (text and multimedia) between a client and a server. The project provides both CLI and GUI front-ends, configurable bit-error simulation (BER), and detailed performance logging (throughput, SNR, data-integrity).
 
----
+Features
+- Stop-and-Wait ARQ sender and receiver with CRC32 error detection
+- GUI front-ends: `client_gui.py` and `server_gui.py` for easy demo and testing
+- File chunking and retransmission logic (handles text, images, audio, video)
+- Configurable BER to simulate noisy channels and observe retransmissions
+- Detailed logs: transmission events, CRC checks, metrics (throughput, RTT, SNR)
+- Works on a single machine or across two machines on the same local network
 
-## Important files (what to commit)
-- `README.md` — this file (quick start and validation).
-- `LICENSE` — project license (e.g., MIT).
-- `requirements.txt` — runtime dependencies.
-- `.gitignore` — ignore runtime logs, caches, and large media.
+Files included (important)
+- `Codes/client_gui.py` — client GUI (select files, set BER, connect to server, send)
+- `Codes/server_gui.py` — server GUI (listen, show reception, save received files)
+- `Codes/client.py` / `Codes/server.py` — CLI sender/receiver (optional)
+- `Codes/crc_utils.py` — CRC implementations (CRC32 and CRC16 helper)
+- `Codes/file_chunker.py` — file chunking helper
+- `Codes/simple_test.py` / `Codes/test_runner.py` — demo and automated test harness
+- `tests/test_crc.py` — small unit test for CRC functions (CI-friendly)
 
-Codes/ (core source)
-- `client.py` — sender: chunking, CRC32, optional error simulation, send chunk+CRC, wait ACK/NACK, retransmit.
-- `server.py` — receiver: verify CRC, send ACK/NACK, buffer chunks, reconstruct/save files, log metrics.
-- `crc_utils.py` — CRC helpers (CRC32 and CRC16-CCITT).
-- `file_chunker.py` — file chunking helper.
-- `simple_test.py` — small demo for one transfer.
-- `test_runner.py` — automated test harness (reproducible experiments).
+Software requirements
+- Python 3.10+ (recommended)
+- tkinter (usually bundled with Python)
+- Minimal Python packages: matplotlib, pytest
 
-Tests
-- `tests/test_crc.py` — unit test for CRC functions (keeps CI fast and network-free).
-
-Do NOT commit runtime folders and large media:
-- `Log Files/`, `Received Output/`, large files in `Test Samples/`, `__pycache__/`.
-
----
-
-## Quick start (PowerShell)
-1. Open PowerShell in the repository root (where `Codes/` is).
-2. Create and activate a virtual environment and install dependencies:
+Installation (PowerShell)
+Open PowerShell in the repository root and run:
 
 ```powershell
+# optional: create and activate a virtual environment
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+
+# install minimal runtime packages
+pip install matplotlib pytest
+```
+
+Or install from `requirements.txt` if present:
+
+```powershell
 pip install -r requirements.txt
 ```
 
-3. Run the server (one terminal):
+Usage (GUI) — single laptop
+1. Start the server GUI in one terminal:
 
 ```powershell
-python .\Codes\server.py
+python .\Codes\server_gui.py
 ```
 
-4. Run the client (another terminal):
+2. Start the client GUI in another terminal:
 
 ```powershell
-python .\Codes\client.py
+python .\Codes\client_gui.py
 ```
 
-- Use `localhost` for server IP when testing locally.
-- Enter file path or text at the client prompt; set bit-error probability per chunk (0 for none); type `END` to finish the session.
+3. In the client GUI:
+- Enter server IP as `localhost` (or leave blank if the GUI auto-discovers).
+- Click `Browse` to select a test file from your computer.
+- Set BER (bit-error rate) to simulate noise; use `0` for a clean channel.
+- Click `Connect`, then `Send` to start the transfer.
 
-Run the demo script (server must be running):
+4. After transmission finishes the server will save the received file under `Received Output/` and both sides write logs under `Log Files/`.
+
+Usage (GUI) — two laptops on same WiFi
+1. On the server laptop, run:
 
 ```powershell
-python .\Codes\simple_test.py
+python .\Codes\server_gui.py
 ```
 
-Run unit tests:
+2. On the client laptop, ensure both laptops are connected to the same local network (same WiFi). Run:
 
 ```powershell
-pytest -q
+python .\Codes\client_gui.py
 ```
 
----
+3. In the client GUI: enter the server laptop's IPv4 address (find it with `ipconfig` on Windows), set BER, choose the file, then `Connect` and `Send`.
 
-## Quick validation checklist
-1. Run one transfer with error probability `0` and verify SHA256 hashes of original and received files match:
+Notes:
+- Both machines must be on the same local network and port 65432 should be reachable (allow Python through the firewall if prompted).
+- The client GUI sends chunk+CRC for each chunk; the server replies with ACK or NACK and reconstructs the file after all chunks are received.
 
-```powershell
-Get-FileHash .\Test Samples\sample_image.jpg -Algorithm SHA256
-Get-FileHash .\Received Output\received_file.jpg -Algorithm SHA256
-```
+Simulating noise (BER)
+- Use the BER control in the client GUI to introduce random single-bit flips per chunk.
+- Observe retransmissions in the client `transmission_log.txt` and CRC mismatches in the server `crc_log.txt`.
+- Increase BER to see throughput drop and retransmissions increase; set BER to `0` for baseline comparisons.
 
-2. Inspect logs for ACKs/NACKs and metrics in `Log Files/`.
-3. Run `pytest` to ensure the CRC unit test passes.
+Troubleshooting
+- Connection refused: ensure server GUI is running and firewall allows port 65432.
+- Wrong server IP: on the server run `ipconfig` and use the IPv4 address on the client.
+- Received file missing or corrupted: try BER = 0, check logs for early disconnects or `Incomplete data` messages.
+- GUI not appearing: ensure `tkinter` is installed and your Python distribution includes it.
 
-If these pass, the ARQ+CRC implementation is working and file reconstruction is correct.
+Common parameters to tune (in code)
+- `CHUNK_SIZE` — size of each chunk (default 1024 bytes)
+- `MAX_RETRIES` — how many times the client retries a chunk
+- `TIMEOUT` — socket recv timeout in seconds
 
----
+Project license
+This project is licensed under the MIT License — see `LICENSE`.
 
-## Troubleshooting (short)
-- Connection refused: ensure server is running and port 65432 is not blocked by firewall.
-- Empty `Received Output`: check server logs for `Incomplete data` or early disconnect messages.
-- Large-file tests: use small samples for local demos; host large files via Releases or external storage.
+Author
+Karthik S
 
----
 
-## Notes
-- Keep logs and received files out of git; include only small sample data for demos.
-- Add `tests/test_crc.py` and a minimal CI workflow to run tests on push/PR if you want continuous validation.
+
+If you want, I can add a short `README.md`, a `.gitignore`, and a minimal `tests/test_crc.py` unit test file to the repository now.
 
