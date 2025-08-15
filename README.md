@@ -38,10 +38,10 @@ python .\Codes\client_gui.py
 ```
 
 3. In the client GUI:
-- Enter server IP as `localhost` (or leave blank if the GUI auto-discovers).
+- Enter server IP and click connect.
 - Click `Browse` to select a test file from your computer.
 - Set BER (bit-error rate) to simulate noise; use `0` for a clean channel.
-- Click `Connect`, then `Send` to start the transfer.
+- Click `Start Transmission` to start the transfer.
 
 4. After transmission finishes the server will save the received file under `Received Output/` and both sides write logs under `Log Files/`.
 
