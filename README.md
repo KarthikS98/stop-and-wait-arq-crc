@@ -16,8 +16,6 @@ Files included (important)
 - `Codes/client.py` / `Codes/server.py` — CLI sender/receiver (optional)
 - `Codes/crc_utils.py` — CRC implementations (CRC32 and CRC16 helper)
 - `Codes/file_chunker.py` — file chunking helper
-- `Codes/simple_test.py` / `Codes/test_runner.py` — demo and automated test harness
-- `tests/test_crc.py` — small unit test for CRC functions (CI-friendly)
 
 Software requirements
 - Python 3.10+ (recommended)
